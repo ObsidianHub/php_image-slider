@@ -18,7 +18,7 @@ if ($_POST['OneFile'])
 	if (file_exists($destination)) 
 		{
 			echo "Файл $my_file_name уже загружен <br>";
-			$sql = "SELECT * FROM `galery` WHERE hash_file = '$my_hash_file';";
+			$sql = "SELECT * FROM `gallery` WHERE hash_file = '$my_hash_file';";
 			$result = getRowResult($sql);
 			if ($result)
 			{
@@ -34,7 +34,7 @@ if ($_POST['OneFile'])
 					print "Файл успешно загружен <br>";
 					
 					
-					echo $sql = "INSERT INTO `galery` (`id_galery`, `name_foto`, `hash_file`, `name_file`) VALUES (NULL, '$NameImg', '$my_hash_file', '$my_file_name')";
+					echo $sql = "INSERT INTO `gallery` (`id_gallery`, `name_foto`, `hash_file`, `name_file`) VALUES (NULL, '$NameImg', '$my_hash_file', '$my_file_name')";
 					executeQuery($sql);
 					
 					create_thumbnail($destination, $destination_small, 320, 320);
@@ -50,8 +50,8 @@ if ($_POST['OneFile'])
 		}
 }
 
-$sql = "Select * from galery ORDER BY view DESC";
-return $galery = getAssocResult($sql);
+$sql = "Select * from gallery ORDER BY view DESC";
+return $gallery = getAssocResult($sql);
 }
 
 

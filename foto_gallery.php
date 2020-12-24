@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="css/photogalery.css?v=<?php echo(microtime(true)); ?>">
+<link rel="stylesheet" href="css/photogallery.css?v=<?php echo(microtime(true)); ?>">
 <title>Документ без названия</title>
 </head>
 
@@ -13,17 +13,17 @@ require_once('config/config.php');
 require_once('engine/resize.php');
 
 $id = $_GET['id'];
-$sql = "Select * from galery where id_galery = $id;";
-$galery = getAssocResult($sql);
+$sql = "Select * from gallery where id_gallery = $id;";
+$gallery = getAssocResult($sql);
 
 
-$sql = "UPDATE galery SET `view` = `view` + 1 where id_galery = $id";
+$sql = "UPDATE gallery SET `view` = `view` + 1 where id_gallery = $id";
 executeQuery($sql);
 
 
 ?>
 <div class="big_image">
-<img src="<?=UPLOAD_DIR.$galery[0]['hash_file'] ?>" >
+<img src="<?=UPLOAD_DIR.$gallery[0]['hash_file'] ?>" >
 
 </div>
 </body>
