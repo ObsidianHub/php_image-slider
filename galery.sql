@@ -19,20 +19,20 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `gallery`
+-- База данных: `galery`
 --
-CREATE DATABASE IF NOT EXISTS `gallery` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `gallery`;
+CREATE DATABASE IF NOT EXISTS `galery` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `galery`;
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `gallery`
+-- Структура таблицы `galery`
 --
 
-DROP TABLE IF EXISTS `gallery`;
-CREATE TABLE `gallery` (
-  `id_gallery` int(11) NOT NULL,
+DROP TABLE IF EXISTS `galery`;
+CREATE TABLE `galery` (
+  `id_galery` int(11) NOT NULL,
   `name_foto` varchar(250) NOT NULL,
   `hash_file` varchar(250) NOT NULL,
   `name_file` varchar(250) NOT NULL,
@@ -40,10 +40,10 @@ CREATE TABLE `gallery` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `gallery`
+-- Дамп данных таблицы `galery`
 --
 
-INSERT INTO `gallery` (`id_gallery`, `name_foto`, `hash_file`, `name_file`, `view`) VALUES
+INSERT INTO `galery` (`id_galery`, `name_foto`, `hash_file`, `name_file`, `view`) VALUES
 (69, '', '076e3caed758a1c18c91a0e9cae3368f.jpg', 'Chrysanthemum.jpg', 0),
 (70, '', '2b04df3ecc1d94afddff082d139c6f15.jpg', 'Koala.jpg', 0),
 (71, '', 'fafa5efeaf3cbe3b23b2748d13e629a1.jpg', 'Tulips.jpg', 0),
@@ -54,20 +54,20 @@ INSERT INTO `gallery` (`id_gallery`, `name_foto`, `hash_file`, `name_file`, `vie
 --
 
 --
--- Индексы таблицы `gallery`
+-- Индексы таблицы `galery`
 --
-ALTER TABLE `gallery`
-  ADD PRIMARY KEY (`id_gallery`);
+ALTER TABLE `galery`
+  ADD PRIMARY KEY (`id_galery`);
 
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
 --
--- AUTO_INCREMENT для таблицы `gallery`
+-- AUTO_INCREMENT для таблицы `galery`
 --
-ALTER TABLE `gallery`
-  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;COMMIT;
+ALTER TABLE `galery`
+  MODIFY `id_galery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

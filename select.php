@@ -1,7 +1,8 @@
-<?php
+﻿<?php
 
 require_once('engine/db.php');
 require_once('config/config.php');
+
 
 $sql = "Select * from galery;";
 $image = getAssocResult($sql);
@@ -15,14 +16,22 @@ $varR = ($var3 + 1 <= count($image)-1) ? $var3 + 1 : 0;
 $img = UPLOAD_DIR . $image[$var3][hash_file];
 $varRand = rand(0,count($image)-1);
 
+
+
 $send = [
- varL => "<a href=\"javascript:Photogallery($varL)\">Предыдущая картинка</a>",
- varR => "<a href=\"javascript:Photogallery($varR)\">Следующая картинка</a>",
- Centrimage => "<a href=\"javascript:Photogallery($varRand)\"><div class=\"image\"><img height=\"80%\" src=\"$img\"/></div></a>",
+ varL => "<a href=\"javascript:Photogalery($varL)\">Предыдущая картинка</a>",
+ varR => "<a href=\"javascript:Photogalery($varR)\">Следующая картинка</a>",
+ Centrimage => "<a href=\"javascript:Photogalery($varRand)\"><div class=\"image\"><img height=\"80%\" src=\"$img\"/></div></a>",
  leftImage => '#leftImage'
 ];
 
+
+
 echo json_encode($send);
+
+
+
+
 
 ?>
 

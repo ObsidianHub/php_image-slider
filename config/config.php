@@ -4,7 +4,7 @@
 define('HOST', 'localhost');
 define('USER', 'root');
 define('PASS', '');
-define('DB', 'gallery');
+define('DB', 'galery');
 
 
 define('UPLOAD_DIR', 'image/');

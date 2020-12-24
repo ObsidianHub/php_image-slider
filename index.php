@@ -1,10 +1,10 @@
 <html>
 <head>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<link rel="stylesheet" href="css/photogallery.css?v=<?php echo(microtime(true)); ?>">
-<script src="js/gallery.js?v=<?php echo(microtime(true)); ?>"></script>
+<link rel="stylesheet" href="css/photogalery.css?v=<?php echo(microtime(true)); ?>">
+<script src="js/galery.js?v=<?php echo(microtime(true)); ?>"></script>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Image Slider</title>
+<title>Ajax + PHP!!!</title>
 </head>
 <body>
 
@@ -21,22 +21,28 @@ require_once('engine/resize.php');
 
 require_once('engine/function.php');
 
-$gallery = DownloadImage();
+$galery = DownloadImage();
+
+
 
 ?>
 
+
+
 <br>
 
-<div class="smallGallery">
-    <? foreach ($gallery as $key_foto => $foto): ?>
-        <div>
-        <a href="foto_gallery.php?id=<?=$foto['id_gallery']?>" target="_blank" >
-            <img src="<?=UPLOAD_SMALL_DIR.$foto['hash_file'] ?>" />
-        </a>
-        <br>
-        <p>Количество просмотров: <?=$foto['view']?></p>
-        </div>
-    <? endforeach ?>
+
+<div class="smallGalery">
+<? foreach ($galery as $key_foto => $foto): ?>
+<div>
+<a href="foto_galery.php?id=<?=$foto['id_galery']?>" target="_blank" >
+	<img src="<?=UPLOAD_SMALL_DIR.$foto['hash_file'] ?>" />
+</a>
+<br>
+<p>Количество просмотров: <?=$foto['view']?></p>
+</div>
+<? endforeach ?>
+
 </div>
 
 <div class="MyFlex">
@@ -44,6 +50,9 @@ $gallery = DownloadImage();
 <div class="Centrimage"></div>
 <div class="RightImage"></div>
 </div>
+
+
+
 
 </body>
 </html>
